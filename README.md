@@ -17,17 +17,29 @@ This Python script utilizes Selenium and BeautifulSoup to scrape medical disease
    ```
 3. **Download ChromeDriver**: Download ChromeDriver matching your Chrome browser version from [chromedriver.chromium.org](https://sites.google.com/a/chromium.org/chromedriver/downloads). Extract the executable and set `CHROME_DRIVER_PATH` in the script to its location.
 
-## Usage
-1. **Run the Script**:
-   - Ensure ChromeDriver is set up and `CHROME_DRIVER_PATH` is correctly configured in the script.
-   - Execute the script `app.py` using Python:
+## Running the Script Locally
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/monomoy-ok/assignment-3-web-crawler.git
+   cd ssignment-3-web-crawler
+   ```
+
+2. **Set ChromeDriver Path**:
+   - Open the script `app.py` in a text editor.
+   - Set the `CHROME_DRIVER_PATH` variable to the absolute path of your downloaded ChromeDriver executable.
+
+3. **Execute the Script**:
+   - Open a terminal or command prompt.
+   - Navigate to the directory containing `app.py`.
+   - Run the script using Python:
      ```bash
      python app.py
      ```
-2. **Output**:
+
+4. **View Output**:
    - The script will start scraping disease data from [1mg.com](https://www.1mg.com/).
    - It will print each disease found along with its URL.
-   - Data for the first 10 diseases (name, URL, overview, key facts) will be scraped and stored in a JSON file named `diseases_data.json`.
+   - Data for the first 10 diseases (name, URL, overview, key facts) will be scraped and stored in a JSON file named `diseases_data.json` in the same directory.
 
 ## Script Details
 - **get_diseases_list**: Fetches a list of diseases from the 1mg.com page using Selenium for dynamic content loading and BeautifulSoup for HTML parsing.
